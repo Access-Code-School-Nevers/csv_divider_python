@@ -1,0 +1,11 @@
+Download this project.
+Create a folder called "input"
+Create a folder called "output"
+
+Put your files you wanna divide in the "input" folder.
+
+Run csv_divider.py
+
+Your new data is now in the "output" folder.
+
+Thank's for downloading this repository :)
