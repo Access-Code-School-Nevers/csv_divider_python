@@ -38,8 +38,7 @@ for file in os.listdir(input_vcf_path):
         sub_file = open(path, 'w')
         for s in sub:
             sub_file.write(s+'\n')
-        # print(output_path,file.split('.')[0],'-',division_index,'.txt')
-        # division_index += 1
+
     
     
 
