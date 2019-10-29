@@ -1,7 +1,7 @@
 import os
 import mysql.connector
 
-input_vcf_path = "./input"
+input_path = "./input"
 output_path = "./output"
 
 def divide_chunks(l, n): 
@@ -9,16 +9,16 @@ def divide_chunks(l, n):
         yield l[i:i + n] 
 
 #create directories in output folder if they don't exist
-if os.listdir(input_vcf_path):
-    for csv_file in os.listdir(input_vcf_path):
+if os.listdir(input_path):
+    for csv_file in os.listdir(input_path):
         folder_name = csv_file.split('.')[0]
         if not os.path.isdir(folder_name) in os.listdir(output_path) and not folder_name in os.listdir(output_path):
             os.makedirs(os.path.join(output_path,folder_name))
 
-for file in os.listdir(input_vcf_path):
+for file in os.listdir(input_path):
     division_index = 0
     print('Opening file {}'.format(file))
-    csv_file = open(os.path.join(input_vcf_path,file), 'r')
+    csv_file = open(os.path.join(input_path,file), 'r')
     
     print('Reading file...')
     txt = csv_file.read().split('\n')[1:]
