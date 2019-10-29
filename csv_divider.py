@@ -17,7 +17,6 @@ if os.listdir(input_vcf_path):
 
 for file in os.listdir(input_vcf_path):
     division_index = 0
-    line_index = 0
     print('Opening file {}'.format(file))
     csv_file = open(os.path.join(input_vcf_path,file), 'r')
     
