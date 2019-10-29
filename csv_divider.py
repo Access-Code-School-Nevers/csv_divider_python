@@ -4,10 +4,6 @@ import mysql.connector
 input_vcf_path = "./input"
 output_path = "./output"
 
-input_vcf_files = []
-output_vcf_folders = []
-
-
 def divide_chunks(l, n): 
     for i in range(0, len(l), n):  
         yield l[i:i + n] 
